@@ -24,4 +24,6 @@ pipeline {
     post {
         Success {
             archiveArtifacts artifacts: './APM.zip', fingerprint: true
+        }
+    }
 }
