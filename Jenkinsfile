@@ -4,15 +4,15 @@ pipeline {
         stage('Build') {
             steps {
                 dir ('APM-Final') {
-                    sh 'npm install'
-                    sh 'ng build'
+                    sh "${env.npm} install"
+                    sh "${env.ng} build"
                 }
             }
         }
         stage('Unit test') {
             steps {
                 dir ('APM-Final') {
-                    sh 'npm test'
+                    sh "${env.npm} test"
                 }
             }
         }
